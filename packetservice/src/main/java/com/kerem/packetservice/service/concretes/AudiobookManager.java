@@ -9,7 +9,7 @@ import com.kerem.packetservice.service.dto.responses.get.GetAudiobookResponse;
 import com.kerem.packetservice.service.dto.responses.update.UpdateAudiobookResponse;
 import com.kerem.packetservice.service.rules.AudiobookBusinessRules;
 import com.kerem.packetservice.entities.Audiobook;
-import com.kerem.packetservice.entities.enums.State;
+import com.kerem.commonpackage.utils.enums.State;
 import com.kerem.packetservice.repository.AudiobookRepository;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;

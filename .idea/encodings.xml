@@ -5,6 +5,7 @@
     <file url="file://$PROJECT_DIR$/common-package/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/discovery-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/discovery-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/inventory-package/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/order-package/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/order-package/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/packetservice/src/main/java" charset="UTF-8" />

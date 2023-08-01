@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/packetservice/pom.xml" />
         <option value="$PROJECT_DIR$/common-package/pom.xml" />
         <option value="$PROJECT_DIR$/discovery-server/pom.xml" />
+        <option value="$PROJECT_DIR$/inventory-package/pom.xml" />
       </list>
     </option>
   </component>

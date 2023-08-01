@@ -6,7 +6,7 @@ import com.kerem.packetservice.service.dto.responses.create.CreateAudiobookRespo
 import com.kerem.packetservice.service.dto.responses.get.GetAllAudiobooksResponse;
 import com.kerem.packetservice.service.dto.responses.get.GetAudiobookResponse;
 import com.kerem.packetservice.service.dto.responses.update.UpdateAudiobookResponse;
-import com.kerem.packetservice.entities.enums.State;
+import com.kerem.commonpackage.utils.enums.State;
 
 import java.util.List;
 

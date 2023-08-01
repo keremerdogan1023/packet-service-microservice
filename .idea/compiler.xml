@@ -9,6 +9,7 @@
         <module name="order-package" />
         <module name="discovery-server" />
         <module name="PacketService" />
+        <module name="inventory-package" />
         <module name="user-package" />
         <module name="common-package" />
       </profile>
@@ -19,6 +20,7 @@
       <module name="PacketService" options="-parameters" />
       <module name="common-package" options="-parameters" />
       <module name="discovery-server" options="-parameters" />
+      <module name="inventory-package" options="-parameters" />
       <module name="order-package" options="-parameters" />
       <module name="user-package" options="-parameters" />
     </option>

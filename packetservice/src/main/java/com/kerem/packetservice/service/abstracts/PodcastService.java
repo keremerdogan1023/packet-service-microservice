@@ -6,7 +6,7 @@ import com.kerem.packetservice.service.dto.responses.create.CreatePodcastRespons
 import com.kerem.packetservice.service.dto.responses.get.GetAllPodcastsResponse;
 import com.kerem.packetservice.service.dto.responses.get.GetPodcastResponse;
 import com.kerem.packetservice.service.dto.responses.update.UpdatePodcastResponse;
-import com.kerem.packetservice.entities.enums.State;
+import com.kerem.commonpackage.utils.enums.State;
 
 import java.util.List;
 

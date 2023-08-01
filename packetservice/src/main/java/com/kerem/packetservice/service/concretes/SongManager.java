@@ -9,7 +9,7 @@ import com.kerem.packetservice.service.dto.responses.get.GetSongResponse;
 import com.kerem.packetservice.service.dto.responses.update.UpdateSongResponse;
 import com.kerem.packetservice.service.rules.SongBusinessRules;
 import com.kerem.packetservice.entities.Song;
-import com.kerem.packetservice.entities.enums.State;
+import com.kerem.commonpackage.utils.enums.State;
 import com.kerem.packetservice.repository.SongRepository;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;

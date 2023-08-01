@@ -9,7 +9,7 @@ import com.kerem.packetservice.service.dto.responses.get.GetRecordResponse;
 import com.kerem.packetservice.service.dto.responses.update.UpdateRecordResponse;
 import com.kerem.packetservice.service.rules.RecordBusinessRules;
 import com.kerem.packetservice.entities.Record;
-import com.kerem.packetservice.entities.enums.State;
+import com.kerem.commonpackage.utils.enums.State;
 import com.kerem.packetservice.repository.RecordRepository;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;

@@ -9,7 +9,7 @@ import com.kerem.packetservice.service.dto.responses.get.GetPodcastResponse;
 import com.kerem.packetservice.service.dto.responses.update.UpdatePodcastResponse;
 import com.kerem.packetservice.service.rules.PodcastBusinessRules;
 import com.kerem.packetservice.entities.Podcast;
-import com.kerem.packetservice.entities.enums.State;
+import com.kerem.commonpackage.utils.enums.State;
 import com.kerem.packetservice.repository.PodcastRepository;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;

@@ -1,7 +1,7 @@
 package com.kerem.packetservice.service.dto.requests.update;
 
 import com.kerem.packetservice.common.utils.annotations.BlacklistName;
-import com.kerem.packetservice.entities.enums.State;
+import com.kerem.commonpackage.utils.enums.State;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,7 +1,7 @@
 package com.kerem.packetservice.service.dto.responses.get;
 
 
-import com.kerem.packetservice.entities.enums.State;
+import com.kerem.commonpackage.utils.enums.State;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
