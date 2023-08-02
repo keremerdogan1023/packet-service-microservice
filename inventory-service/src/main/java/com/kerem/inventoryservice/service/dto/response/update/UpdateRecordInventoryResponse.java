@@ -12,13 +12,11 @@ import lombok.Setter;
 @AllArgsConstructor
 public class UpdateRecordInventoryResponse {
     private int id;
-    private int PacketId;
+    private int packetId;
     private String name;
     private int time;
     private State state;
-    private String author;
-    private String voiceOverOwner;
-    private String provider;
+    private String owner;
     private double price;
     private int quantity;
 }

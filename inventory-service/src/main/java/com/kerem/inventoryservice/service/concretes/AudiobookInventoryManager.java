@@ -21,7 +21,7 @@ public class AudiobookInventoryManager implements AudiobookInventoryService {
     @Override
     public List<GetAllAudiobooksInventoryResponse> getAll() {
         List<AudiobookInventory> audiobookInventories = repository.findAll();
-        var response = audiobookInventories.stream()
+        List<GetAllAudiobooksInventoryResponse> response = audiobookInventories.stream()
                 .map(audiobookInventory -> mapper.forResponse().map(audiobookInventory, GetAllAudiobooksInventoryResponse.class))
                 .toList();
         return response;
@@ -85,4 +85,5 @@ public class AudiobookInventoryManager implements AudiobookInventoryService {
         var response = mapper.forResponse().map(updatedAudiobook, UpdateAudiobookInventoryResponse.class);
         return response;
     }
+
 }
