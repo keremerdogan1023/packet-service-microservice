@@ -2,18 +2,22 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="order-package" />
         <module name="discovery-server" />
-        <module name="PacketService" />
+        <module name="packet-servicee" />
+        <module name="common-package" />
+        <module name="order-package" />
         <module name="inventory-package" />
         <module name="user-package" />
-        <module name="common-package" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="PacketService" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -22,6 +26,7 @@
       <module name="discovery-server" options="-parameters" />
       <module name="inventory-package" options="-parameters" />
       <module name="order-package" options="-parameters" />
+      <module name="packet-servicee" options="-parameters" />
       <module name="user-package" options="-parameters" />
     </option>
   </component>

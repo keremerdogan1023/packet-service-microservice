@@ -17,7 +17,7 @@ import lombok.Setter;
 public class AudiobookInventory {
     @Id
     private int id;
-    private int PacketId;
+    private int packetId;
     private String name;
     private int time;
     private State state;

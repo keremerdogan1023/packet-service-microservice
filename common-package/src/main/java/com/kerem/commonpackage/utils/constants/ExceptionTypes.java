@@ -1,5 +1,7 @@
 package com.kerem.commonpackage.utils.constants;
 
+
+
 public class ExceptionTypes {
     public static class Exception {
         public static final String Business = "BUSINESS_EXCEPTION";

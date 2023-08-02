@@ -1,5 +1,7 @@
 package com.kerem.inventorypackage.service.abstracts;
 
+import com.kerem.inventorypackage.entities.AudiobookInventory;
+import com.kerem.inventorypackage.entities.RecordInventory;
 import com.kerem.inventorypackage.service.dto.requests.UpdateAudiobookInventoryRequest;
 import com.kerem.inventorypackage.service.dto.requests.UpdateRecordInventoryRequest;
 import com.kerem.inventorypackage.service.dto.response.get.GetAllAudiobooksInventoryResponse;
@@ -15,4 +17,6 @@ public interface RecordInventoryService {
     List<GetAllRecordInventoryResponse> getAll();
     GetRecordInventoryResponse getById(int id);
     UpdateRecordInventoryResponse update(int id, UpdateRecordInventoryRequest request);
+    void add(RecordInventory inventory);
+    void delete(int id);
 }

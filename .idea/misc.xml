@@ -10,7 +10,14 @@
         <option value="$PROJECT_DIR$/common-package/pom.xml" />
         <option value="$PROJECT_DIR$/discovery-server/pom.xml" />
         <option value="$PROJECT_DIR$/inventory-package/pom.xml" />
+        <option value="$PROJECT_DIR$/packet-service/pom.xml" />
+        <option value="$PROJECT_DIR$/packet-servicee/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/packetservice/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="18" project-jdk-type="JavaSDK">
