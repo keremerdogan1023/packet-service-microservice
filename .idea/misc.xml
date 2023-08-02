@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/inventory-package/pom.xml" />
         <option value="$PROJECT_DIR$/packet-service/pom.xml" />
         <option value="$PROJECT_DIR$/packet-servicee/pom.xml" />
+        <option value="$PROJECT_DIR$/api-gateway/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

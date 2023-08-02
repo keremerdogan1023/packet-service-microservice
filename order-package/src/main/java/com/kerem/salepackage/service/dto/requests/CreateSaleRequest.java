@@ -12,7 +12,6 @@ import lombok.Setter;
 public class CreateSaleRequest {
     private int packageId;
     private int mediaId;
-    private double price;
     private int quantity;
 
 }

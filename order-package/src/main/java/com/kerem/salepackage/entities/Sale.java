@@ -20,7 +20,7 @@ public class Sale {
     private int id;
     private int packageId;
     private int mediaId;
-    private double price;
+    private double totalPrice;
     private int quantity;
     private LocalDate saledAt;
 

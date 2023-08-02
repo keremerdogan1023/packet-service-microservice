@@ -1,7 +1,10 @@
 package com.kerem.salepackage.service.concretes;
 
+import com.kerem.commonpackage.events.sale.SaleCreatedEvent;
 import com.kerem.commonpackage.kafka.producer.KafkaProducer;
+import com.kerem.commonpackage.utils.dto.SaleClientResponse;
 import com.kerem.commonpackage.utils.mappers.ModelMapperService;
+import com.kerem.salepackage.api.clients.AudiobookClient;
 import com.kerem.salepackage.entities.Sale;
 import com.kerem.salepackage.repository.SaleRepository;
 import com.kerem.salepackage.service.abstracts.SaleService;
@@ -23,6 +26,7 @@ public class SaleManager implements SaleService {
     private final SaleRepository repository;
     private final ModelMapperService mapper;
     private final KafkaProducer producer;
+    private final AudiobookClient client;
 
     @Override
     public List<GetAllSalesResponse> getAll() {
@@ -44,9 +48,13 @@ public class SaleManager implements SaleService {
         var sale = mapper.forRequest().map(request, Sale.class);
         sale.setId(0);
         sale.setSaledAt(LocalDate.now());
-        repository.save(sale);
-        return null;
-
+        SaleClientResponse saleClientResponse = client.getAudiobook(request.getMediaId());
+        var totalPrice = getTotalPrice(saleClientResponse, sale.getQuantity());
+        sale.setTotalPrice(totalPrice);
+        var createdSale = repository.save(sale);
+        sendKafkaSaleCreatedEvent(createdSale,saleClientResponse);
+        var response = mapper.forResponse().map(sale, CreateSaleResponse.class);
+        return response;
 
     }
 
@@ -60,5 +68,20 @@ public class SaleManager implements SaleService {
 
     }
 
-    private void sendKafkaSaleCreatedEvent()
+    private double getTotalPrice(SaleClientResponse response, int quantity){
+        return response.getPrice() * quantity;
+    }
+    private void sendKafkaSaleCreatedEvent(Sale createdSale, SaleClientResponse saleClientResponse){
+        var createdSaleEvent = mapper.forRequest().map(createdSale, SaleCreatedEvent.class);
+        createdSaleEvent.setQuantity(saleClientResponse.getQuantity()- createdSale.getQuantity());
+        if (createdSale.getPackageId() == 1){
+            producer.sendMessage(createdSaleEvent,"audiobook-order-created");
+        } else if (createdSale.getPackageId() == 2) {
+            producer.sendMessage(createdSaleEvent,"podcast-order-created");
+        } else if (createdSale.getPackageId() == 3) {
+            producer.sendMessage(createdSaleEvent,"record-order-created");
+        } else if (createdSale.getPackageId() == 4) {
+            producer.sendMessage(createdSaleEvent,"song-order-created");
+        }
+    }
 }

@@ -8,10 +8,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="discovery-server" />
+        <module name="inventory-service" />
         <module name="packet-servicee" />
         <module name="common-package" />
+        <module name="api-gateway" />
         <module name="order-package" />
-        <module name="inventory-package" />
         <module name="user-package" />
       </profile>
     </annotationProcessing>
@@ -22,9 +23,10 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="PacketService" options="-parameters" />
+      <module name="api-gateway" options="-parameters" />
       <module name="common-package" options="-parameters" />
       <module name="discovery-server" options="-parameters" />
-      <module name="inventory-package" options="-parameters" />
+      <module name="inventory-service" options="-parameters" />
       <module name="order-package" options="-parameters" />
       <module name="packet-servicee" options="-parameters" />
       <module name="user-package" options="-parameters" />
